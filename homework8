@@ -1,0 +1,15 @@
+import random
+def print_params(speed, time):
+    speed_limit = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    time_of_driving = [5, 10, 15, 20]
+    speed_num = random.choice(speed_limit)
+    speed_limit.remove(speed_num) #Как я понимаю эта строчка не очень нужна, так как вероятность повторения значения маловероятна, ибо используются разные списки.
+    time_limit = random.choice(time_of_driving)
+    print(speed, time)
+    return speed_num, time_limit
+
+speed_num, time_limit = print_params('speed', 'time')
+print(speed_num, time_limit)
+
+S = (speed_num * time_limit)
+print('Расстояние равно:', S)
