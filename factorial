@@ -1,0 +1,16 @@
+def test(*args):
+    print(args)
+    for i, arg in enumerate(args):
+        print('a', i, arg)
+
+test(20, 30, 40)
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+number = 2
+factorial_value = factorial(number)
+print('факториал числа', (number), 'равен', (factorial_value))
